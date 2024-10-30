@@ -6,16 +6,16 @@ function WeatherInformations({ weather }) {
       <h2>{weather.name}</h2>
       <div>
         <img
-          src={`http://openweathermap.org/img/wn/${weather}.png`}
+          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
         />
         <p>{}°C</p>
-        </div>
+      </div>
           <p>{}</p>
-          <div>
-              <p>Sensação térmica: { }</p>
-              <p>Umidade: { }</p>
-              <p>Pressão: { }</p>
-          </div>
+      <div>
+        <p>Sensação térmica: { }</p>
+        <p>Umidade: { }</p>
+        <p>Pressão: { }</p>
+      </div>
     </div>
   );
 }

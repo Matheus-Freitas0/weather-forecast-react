@@ -3,7 +3,7 @@ import axios from 'axios'
 import WeatherInformations from './components/WeatherInformations/WeatherInformations'
 
 function App() {
-  const [weather, setWeather] = useState({})
+  const [weather, setWeather] = useState({ })
   const inputRef = useRef()
 
   async function searchCity() {
