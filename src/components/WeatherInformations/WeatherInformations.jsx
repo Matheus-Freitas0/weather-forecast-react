@@ -1,5 +1,7 @@
 function WeatherInformations({ weather }) {
-  console.log(weather);
+  if (!weather || !weather.weather || !weather.weather.length) {
+    return <p>Por favor, insira uma cidade para ver a previsão do tempo.</p>;
+  }
 
   return (
     <div>
@@ -7,14 +9,15 @@ function WeatherInformations({ weather }) {
       <div>
         <img
           src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+          alt={weather.weather[0].description}
         />
         <p>{Math.round(weather.main.temp)}°C</p>
       </div>
       <p>{weather.weather[0].description}</p>
       <div>
-        <p>Sensação térmica: {weather.main.feels_like}°C</p>
+        <p>Sensação térmica: {Math.round(weather.main.feels_like)}°C</p>
         <p>Umidade: {weather.main.humidity}%</p>
-        <p>Pressão: {weather.main.pressure}</p>
+        <p>Pressão: {weather.main.pressure} hPa</p>
       </div>
     </div>
   );
