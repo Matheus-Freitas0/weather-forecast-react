@@ -15,6 +15,7 @@ input{
     border-radius: 20px 0 0 20px;
     width: 60%;
     max-width: 300px;
+    font-size: 1rem;
 }
 
 button{
@@ -25,4 +26,9 @@ button{
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: #f57c00;
 }
