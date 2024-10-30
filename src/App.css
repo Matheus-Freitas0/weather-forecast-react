@@ -8,3 +8,21 @@ h1{
     font-size: 3rem;
     color: #fff;
 }
+
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    width: 60%;
+    max-width: 300px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #ff9800;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
