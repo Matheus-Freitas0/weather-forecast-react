@@ -1,6 +1,6 @@
 function WeatherInformations({ weather }) {
-    console.log(weather);
-    
+  console.log(weather);
+
   return (
     <div>
       <h2>{weather.name}</h2>
@@ -8,13 +8,13 @@ function WeatherInformations({ weather }) {
         <img
           src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
         />
-        <p>{}°C</p>
+        <p>{Math.round(weather.main.temp)}°C</p>
       </div>
-          <p>{}</p>
+      <p>{weather.weather[0].description}</p>
       <div>
-        <p>Sensação térmica: { }</p>
-        <p>Umidade: { }</p>
-        <p>Pressão: { }</p>
+        <p>Sensação térmica: {weather.main.feels_like}°C</p>
+        <p>Umidade: {weather.main.humidity}%</p>
+        <p>Pressão: {weather.main.pressure}</p>
       </div>
     </div>
   );
