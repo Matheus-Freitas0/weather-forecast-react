@@ -3,7 +3,7 @@ import axios from 'axios'
 import WeatherInformations from './components/WeatherInformations/WeatherInformations'
 
 function App() {
-  const [weather, setWeather] = useState({ })
+  const [weather, setWeather] = useState()
   const inputRef = useRef()
 
   async function searchCity() {
@@ -22,7 +22,7 @@ function App() {
       <input ref={inputRef} type="text" placeholder='Digite o nome da cidade'/>
       <button onClick={searchCity}>Buscar</button>
       
-      <WeatherInformations weather={weather} /> 
+      {weather && <WeatherInformations weather={weather} /> }
     </div>
   )
 }

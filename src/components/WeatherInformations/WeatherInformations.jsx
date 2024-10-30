@@ -1,7 +1,4 @@
 function WeatherInformations({ weather }) {
-  if (!weather || !weather.weather || !weather.weather.length) {
-    return <p>Por favor, insira uma cidade para ver a previsão do tempo.</p>;
-  }
 
   return (
     <div>
