@@ -1,4 +1,5 @@
 import WeatherInformations from "./components/WeatherInformations/WeatherInformations";
+import WeatherInformations5Days from "./components/WeatherInformations5Days/WeatherInformations5Days";
 import { useState, useRef } from "react";
 import axios from "axios";
 import "./App.css";
@@ -16,9 +17,9 @@ function App() {
     const url5Days = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}&lang=pt_br&units=metric`;
 
     const apiDataWeather = await axios.get(url);
-    const apiInfo5Days = await axios.get(url5Days)
+    const apiInfo5Days = await axios.get(url5Days);
 
-    setWeather5Days(apiInfo5Days.data)
+    setWeather5Days(apiInfo5Days.data);
     setWeather(apiDataWeather.data);
   }
 
@@ -29,7 +30,7 @@ function App() {
       <button onClick={searchCity}>Buscar</button>
 
       {weather && <WeatherInformations weather={weather} />}
-      {weather5Days && <WeatherInformations weather5Days={weather5Days} />}
+      {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
     </div>
   );
 }
