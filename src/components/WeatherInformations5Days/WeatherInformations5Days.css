@@ -20,3 +20,16 @@
     border-radius: 1rem;
     padding: 1rem;
 }
+
+.weather-day{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.weather-img{
+    width: 65px;
+}
+
+.weather-desc{
+    font-size: 1.2rem;
+}

@@ -37,12 +37,13 @@ function WeatherInformations5Days({ weather5Days }) {
       <div className="weather-list">
         {nextFiveDaysForecast.map((forecast) => (
           <div key={forecast.dt} className="weather-item">
-            <p>{forecast.weekday}</p>
+            <p className="weather-day">{forecast.weekday}</p>
             <img
               src={`http://openweathermap.org/img/wn/${forecast.weather.icon}.png`}
               alt="Weather icon"
+              className="weather-img"
             />
-            <p>{forecast.weather.description}</p>
+            <p className="weather-desc">{forecast.weather.description}</p>
             <p>{Math.round(forecast.temp_max)}°C max /{Math.round(forecast.temp_min)}°C min
             </p>
           </div>
